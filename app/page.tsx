@@ -1,9 +1,13 @@
 import React from "react";
+import Home from "./Home/home";
+import { GlobalStyles } from './GlobalStyles';
 
-export default function Home() {
+export default function Main() {
   return (
-    <main>
-        <h1>HELLO WORLD</h1>
-    </main>
+    <>
+    <GlobalStyles />
+    <Home/>
+    </>
+    
   );
 }
