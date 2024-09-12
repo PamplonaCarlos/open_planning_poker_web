@@ -1,0 +1,11 @@
+.fixed-image {
+    z-index: -1;
+    left: -40px !important;
+}
+
+
+@media (max-width: 576px)  { 
+    .logo-image {
+        margin-bottom: -50px;
+    }
+}
