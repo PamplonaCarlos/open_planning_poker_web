@@ -8,7 +8,7 @@ export default function LoginForm({handleInput, children}) {
         <form className="form">
             <h1>Welcome to OpenPP</h1>
             <label>Mail</label>
-            <input type="mail" name="mail" onChange={handleInput}/>
+            <input type="mail" name="email" onChange={handleInput}/>
             <label>Password</label>
             <input type="password" name="password" onChange={handleInput}/>
             {

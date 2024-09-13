@@ -6,6 +6,7 @@ import LoginForm from "../components/LoginForm/login-form";
 import SpinningButton from "../components/SpinnerButton/spinner-button";
 import ForgotPassword from "../components/forgot-password/forgot-password";
 import LoginButton from "../components/LoginButtons/login-button";
+import LoginCooKies from "../app/api/login/route";
 
 export default function Login() {
     const router = useRouter();
@@ -17,10 +18,8 @@ export default function Login() {
         color: "",
     });
     const [formData, setFormData] = useState({
-        name: "",
         email: "",
         password: "",
-        passwordConfirmation: "",
     });
 
     const handleInput = (e: ChangeEvent<HTMLInputElement>) => {
@@ -34,15 +33,21 @@ export default function Login() {
 
       const submitForm =  async (e: React.FormEvent) => {
         e.preventDefault();
-        
         const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:${process.env.NEXT_PUBLIC_API_PORT}/v1/login`, {
           method: "POST",
           body: JSON.stringify(formData),
+      
           headers: {
             'Content-Type': 'application/json'
           },
         });
-    
+        
+        
+        
+        let {token} = await res.json()
+        //TODO: save JWT cookies
+        // LoginCooKies(token)
+
         if (res.status == 200) {
           setLoading(false);
           setWarning({
@@ -68,7 +73,6 @@ export default function Login() {
       return (
         <HomePoker>
           <Warning warning={warning}/>
-          
           <LoginForm handleInput={handleInput} >
             <SpinningButton name="Join" onClick={submitForm} setLoading={setLoading} loading={loading} id="join-button"/>
             <ForgotPassword />
