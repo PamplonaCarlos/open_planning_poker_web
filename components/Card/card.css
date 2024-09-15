@@ -1,0 +1,36 @@
+.card-image {
+    background-image: url('../../public/images/poker-card.png') , linear-gradient(to bottom right, rgb(252, 252, 252), rgb(228, 218, 218));
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+    
+
+}
+
+.card {
+    min-height: 200px;
+    max-width: 200px;
+    font-size: 60px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.7s; /* Adiciona uma transição suave */
+}
+
+.card-rotate {
+    transform: rotateY(180deg);
+}
+
+.card-content {
+    transform: rotateY(180deg);
+}
+
+@media (max-width: 576px) {
+    .card {
+        width: 50px;
+        min-height: 60px;
+    }
+    .name {
+        font-size: 10px;
+    }
+}
+
