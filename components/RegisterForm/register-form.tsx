@@ -7,7 +7,7 @@ export default function RegisterForm({handleInput, children}) {
             <h1>Create an account</h1>
             <label>Name</label>
             <input type="text" name="name" onChange={handleInput} />
-            <label>E-mail</label>
+            <label>Mail</label>
             <input type="email" name="email" onChange={handleInput}/>
             <label>Password</label>
             <input type="password" name="password" onChange={handleInput}/>

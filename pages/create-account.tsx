@@ -4,7 +4,10 @@ import { useRouter } from 'next/router';
 import HomePoker from "../contents/HomePoker/home-poker";
 import Warning from "../contents/Warning/warning";
 import RegisterForm from "../components/RegisterForm/register-form";
+import LoginForm from "../components/LoginForm/login-form";
 import SpinningButton from "../components/SpinnerButton/spinner-button";
+import LoginButton from "../components/LoginButtons/login-button";
+import ForgotPassword from "../components/forgot-password/forgot-password";
 
 export default function CreateAccount() {
 
@@ -68,8 +71,14 @@ export default function CreateAccount() {
     <HomePoker>
       <Warning warning={warning}/>
       <RegisterForm handleInput={handleInput}>
-        <SpinningButton name="Register" onClick={submitForm} setLoading={setLoading} loading={loading}/>
+        <SpinningButton name="Register" onClick={submitForm} setLoading={setLoading} loading={loading} id="join-button"/>
       </RegisterForm>
+      {/* <LoginForm handleInput={handleInput} >
+        <SpinningButton name="Join" onClick={submitForm} setLoading={setLoading} loading={loading} id="join-button"/>
+        <ForgotPassword />
+        <LoginButton name="Create an account" onClick={submitForm} setLoading={setLoading} loading={loading} url={"/create-account"} color={"black"} id="create-account-button"/>
+        <LoginButton name="Create a room without login" onClick={submitForm} setLoading={setLoading} loading={loading} url={"/create-account"} color={"white"}  id="create-room-button"/>
+      </LoginForm> */}
     </HomePoker>
   );
 }
