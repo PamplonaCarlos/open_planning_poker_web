@@ -9,6 +9,9 @@ import LoginForm from "../components/LoginForm/login-form";
 import SpinningButton from "../components/SpinnerButton/spinner-button";
 import ForgotPassword from "../components/forgot-password/forgot-password";
 import LoginButton from "../components/LoginButtons/login-button";
+import { v4 as uuidv4 } from 'uuid';
+
+const uuid = uuidv4();
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const cookies = nookies.get(ctx);
@@ -54,6 +57,8 @@ export default function Login() {
 
       const submitForm = async (e: React.FormEvent) => {
         e.preventDefault();
+        setLoading(true);
+      
         const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:${process.env.NEXT_PUBLIC_API_PORT}/v1/login`, {
           method: "POST",
           body: JSON.stringify(formData),
@@ -62,23 +67,28 @@ export default function Login() {
           },
         });
       
-        const { token } = await res.json();
+        const data = await res.json();
+        const { token } = data;
       
         if (res.status === 200) {
-          setLoading(false);
-          setWarning({
-            state: true,
-            name: "Login efetuado com sucesso",
-            color: "success",
-          });
-      
+          
           setCookie(null, 'token', token, {
             maxAge: 30 * 24 * 60 * 60,
             path: '/',
           });
       
-          router.push("/");
+          
+      
+         
+          setCookie(null, 'uuid', uuid, {
+            maxAge: 30 * 24 * 60 * 60,
+            path: '/',
+          });
+      
+          
+          router.push(`/`);
         } else {
+
           setLoading(false);
           setWarning({
             state: true,
@@ -91,6 +101,7 @@ export default function Login() {
         }
       };
       
+      
 
       return (
         <HomePoker>
@@ -99,7 +110,7 @@ export default function Login() {
             <SpinningButton name="Join" onClick={submitForm} setLoading={setLoading} loading={loading} id="join-button"/>
             <ForgotPassword />
             <LoginButton name="Create an account" onClick={submitForm} setLoading={setLoading} loading={loading} url={"/create-account"} color={"black"} id="create-account-button"/>
-            <LoginButton name="Create a room without login" onClick={submitForm} setLoading={setLoading} loading={loading} url={"/create-account"} color={"white"}  id="create-room-button"/>
+            <LoginButton name="Create a room without login" onClick={submitForm} setLoading={setLoading} loading={loading} url={`/room/${uuid}`} color={"white"}  id="create-room-button"/>
           </LoginForm>
         </HomePoker>
       );
