@@ -1,0 +1,117 @@
+/* Container para o dashboard */
+.dashboardContainer {
+    position: absolute;
+    width: 306px;
+    height: 540px;
+    left: 0;
+    top: 0;
+    background: #ffffff;
+    box-shadow: 0px 110.802px 88.642px rgba(141, 145, 160, 0.0196802),
+                0px 46.2906px 37.0325px rgba(141, 145, 160, 0.0282725),
+                0px 24.7492px 19.7993px rgba(141, 145, 160, 0.035),
+                0px 13.8742px 11.0994px rgba(141, 145, 160, 0.0417275),
+                0px 7.36848px 5.89478px rgba(141, 145, 160, 0.0503198),
+                0px 3.06619px 2.45295px rgba(0, 0, 0, 0.07);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribui o espaço entre o conteúdo e o rodapé */
+  }
+  
+  /* Título do dashboard */
+  .dashboardTitle {
+    position: absolute;
+    width: 298px;
+    height: 29px;
+    left: 342px;
+    top: 30px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -0.02em;
+    color: #1e1e1e;
+  }
+  
+  /* Container para a lista de salas */
+  .roomList {
+    position: absolute;
+    width: 583px;
+    height: 464px;
+    left: 342px;
+    top: 76px;
+    overflow-y: auto; /* Adiciona rolagem se a lista for maior que o contêiner */
+  }
+  
+  /* Item da sala */
+  .roomItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  /* Rodapé do dashboard */
+  .dashboardFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    padding: 20px;
+    background: #ffffff;
+    position: absolute;
+    width: 306px; /* A mesma largura do container */
+    top: 0; /* Posicionado no topo */
+  }
+  
+  /* Conteúdo do rodapé */
+  .footerContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Nome do usuário */
+  .userName {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #1e1e1e;
+    margin-bottom: 8px;
+  }
+  
+  /* Texto abaixo do nome do usuário */
+  .footerText {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #8b8d9a;
+    margin-bottom: 16px;
+  }
+  
+  /* Botões do rodapé */
+  .footerButton {
+    width: 79.78px;
+    height: 28.6px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 19.9444px;
+    line-height: 25px;
+    letter-spacing: -0.01em;
+    color: #8b8d9a;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo do botão ao passar o mouse */
+  .footerButton:hover {
+    color: #1e1e1e;
+  }
+  
