@@ -8,12 +8,15 @@
 }
 
 .card {
-    min-height: 200px;
-    max-width: 200px;
+    min-height: 264px;
+    max-width: 189px;
     font-size: 60px;
     font-weight: 600;
     cursor: pointer;
     transition: transform 0.7s; /* Adiciona uma transição suave */
+    border-radius: 15px;
+    border: 2px solid;
+
 }
 
 .card-rotate {

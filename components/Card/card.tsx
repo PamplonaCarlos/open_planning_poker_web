@@ -12,7 +12,7 @@ export default function Card({ name, voted, number, show, proportion }) {
                     <div className={`card ${show ? "card-rotate": "card-image "}  ${ voted ? "border border-3 border-danger" : ""} w-75 h-100 d-flex justify-content-center align-items-center`} >
                         <span className='card-content text-danger'>
                         {
-                            show ? number == 999? "∞" : number == -2? "chá": number : ""
+                            show ? number == 999? "∞" : number == -2? "☕": number : ""
                         }
                         </span>
                     </div>
