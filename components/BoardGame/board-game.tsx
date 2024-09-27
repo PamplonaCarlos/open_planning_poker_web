@@ -60,11 +60,11 @@ export default function BoardGame({handleVote, handleShowVotes, handleNewVote, h
                         Show votes
                     </button>
                 </div>
-                {/* <div className="col-12 row d-flex justify-content-center align-items-center">
-                    <button className=" col-12 btn bg-danger mb-2 text-white"  data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={()=>handleOpenModal()}>
+                <div className="col-12 row d-flex justify-content-center align-items-center">
+                    <button className=" col-12 btn bg-danger mb-2 text-white" disabled={true} data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={()=>handleOpenModal()}>
                         See Analytic
                     </button>
-                </div> */}
+                </div>
                 <div className="col-12 row d-flex justify-content-center align-items-center">
                     <button className="col-12 btn bg-dark text-white" onClick={()=>handleNewVote()}>
                         New vote
