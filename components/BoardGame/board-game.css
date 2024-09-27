@@ -1,0 +1,14 @@
+.btn-card{
+    height: 80%;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.br{
+    border-radius: 15px;
+    padding: 10px;
+
+}
+
+
