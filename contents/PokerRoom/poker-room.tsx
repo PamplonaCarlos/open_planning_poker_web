@@ -5,10 +5,7 @@ export default function PokerRoom({ children}) {
     return(
         <>
         <main className="container-fluid ">
-                {
-                    children[0]
-                }
-                <div className="row d-flex justify-content-center align-items-center vh-100">
+                <div className="row d-flex justify-content-center align-items-center vh-75">
                     {
                     children[1]
                     }
