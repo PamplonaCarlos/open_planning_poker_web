@@ -53,7 +53,7 @@ export default function CreateAccount() {
         color: "success",
       });
       setTimeout(()=>{}, 7000);
-      router.push("/login");
+      router.push("/");
     } else {
       setLoading(false);
       setWarning({
@@ -73,12 +73,6 @@ export default function CreateAccount() {
       <RegisterForm handleInput={handleInput}>
         <SpinningButton name="Register" onClick={submitForm} setLoading={setLoading} loading={loading} id="join-button"/>
       </RegisterForm>
-      {/* <LoginForm handleInput={handleInput} >
-        <SpinningButton name="Join" onClick={submitForm} setLoading={setLoading} loading={loading} id="join-button"/>
-        <ForgotPassword />
-        <LoginButton name="Create an account" onClick={submitForm} setLoading={setLoading} loading={loading} url={"/create-account"} color={"black"} id="create-account-button"/>
-        <LoginButton name="Create a room without login" onClick={submitForm} setLoading={setLoading} loading={loading} url={"/create-account"} color={"white"}  id="create-room-button"/>
-      </LoginForm> */}
     </HomePoker>
   );
 }
