@@ -4,7 +4,9 @@ const LoginButton = ({ name, onClick, setLoading, loading, url, color, id }) => 
 
     const handleClick = (e) => {
         setLoading(id); 
-        onClick(e);
+        if(onClick != undefined){
+            onClick(e);
+        }
         window.location.href = url;
     }
 

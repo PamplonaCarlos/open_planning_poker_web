@@ -105,12 +105,12 @@ export default function Login() {
 
       return (
         <HomePoker>
-          <Warning warning={warning}/>
+          <Warning warning={warning} setWarning={undefined}/>
           <LoginForm handleInput={handleInput} >
             <SpinningButton name="Join" onClick={submitForm} setLoading={setLoading} loading={loading} id="join-button"/>
             <ForgotPassword />
-            <LoginButton name="Create an account" onClick={submitForm} setLoading={setLoading} loading={loading} url={"/create-account"} color={"black"} id="create-account-button"/>
-            <LoginButton name="Create a room without login" onClick={submitForm} setLoading={setLoading} loading={loading} url={`/room/${uuid}`} color={"white"}  id="create-room-button"/>
+            <LoginButton name="Create an account" onClick={undefined} setLoading={setLoading} loading={loading} url={"/create-account"} color={"black"} id="create-account-button"/>
+            <LoginButton name="Create a room without login" onClick={undefined} setLoading={setLoading} loading={loading} url={`/room/${uuid}`} color={"white"}  id="create-room-button"/>
           </LoginForm>
         </HomePoker>
       );
