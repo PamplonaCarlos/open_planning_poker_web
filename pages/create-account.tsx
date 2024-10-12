@@ -1,13 +1,10 @@
 import React, { useState, ChangeEvent } from "react";
 import { useRouter } from 'next/router';
-
+import { StatusCodes } from "http-status-codes"
 import HomePoker from "../contents/HomePoker/home-poker";
 import Warning from "../contents/Warning/warning";
 import RegisterForm from "../components/RegisterForm/register-form";
-import LoginForm from "../components/LoginForm/login-form";
 import SpinningButton from "../components/SpinnerButton/spinner-button";
-import LoginButton from "../components/LoginButtons/login-button";
-import ForgotPassword from "../components/forgot-password/forgot-password";
 
 export default function CreateAccount() {
 
@@ -45,6 +42,8 @@ export default function CreateAccount() {
       },
     });
 
+    console.log(res.status);
+
     if (res.status == 201) {
       setLoading(false);
       setWarning({
@@ -69,7 +68,7 @@ export default function CreateAccount() {
 
   return (
     <HomePoker>
-      <Warning warning={warning}/>
+      <Warning warning={warning} setWarning={setWarning}/>
       <RegisterForm handleInput={handleInput}>
         <SpinningButton name="Register" onClick={submitForm} setLoading={setLoading} loading={loading} id="join-button"/>
       </RegisterForm>

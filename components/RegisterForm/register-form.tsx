@@ -1,4 +1,3 @@
-import SpinningButton from "../SpinnerButton/spinner-button"; 
 import "./register-form.css"
 
 export default function RegisterForm({handleInput, children}) {

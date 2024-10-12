@@ -8,7 +8,7 @@
 
 body {
     font-family: 'Arial', sans-serif, 'Inter';
-    background: linear-gradient(90deg, #F5F5F5, #999999); /* Branco para cinza */
+    background-color: linear-gradient(90deg, #F5F5F5, #999999);
     margin: 0;
     padding: 0;
     height: 100vh;
