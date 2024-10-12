@@ -101,11 +101,9 @@ export default function Login() {
         }
       };
       
-      
-
       return (
         <HomePoker>
-          <Warning warning={warning}/>
+          <Warning warning={warning} setWarning={setWarning}/>
           <LoginForm handleInput={handleInput} >
             <SpinningButton name="Join" onClick={submitForm} setLoading={setLoading} loading={loading} id="join-button"/>
             <ForgotPassword />

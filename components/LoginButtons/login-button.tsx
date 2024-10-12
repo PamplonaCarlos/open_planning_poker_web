@@ -1,13 +1,11 @@
-import { useRouter } from 'next/router';
 import './login-button.css'
 
 const LoginButton = ({ name, onClick, setLoading, loading, url, color, id }) => {
-    const router = useRouter();
 
     const handleClick = (e) => {
         setLoading(id); 
         onClick(e);
-        router.push(url);
+        window.location.href = url;
     }
 
     return (

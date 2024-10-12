@@ -5,10 +5,11 @@
     font-weight: bold;
 }
 
-.br{
-    border-radius: 15px;
+.br {
     padding: 10px;
-
 }
 
+.font-btn {
+    font-size: clamp(16px, 2vw, 24px);
+}
 
