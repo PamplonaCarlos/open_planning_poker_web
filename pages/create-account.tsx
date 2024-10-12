@@ -52,7 +52,7 @@ export default function CreateAccount() {
         color: "success",
       });
       setTimeout(()=>{}, 7000);
-      router.push("/login");
+      router.push("/");
     } else {
       setLoading(false);
       setWarning({
