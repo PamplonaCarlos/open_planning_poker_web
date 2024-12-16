@@ -1,0 +1,190 @@
+/* Container para o dashboard */
+.dashboardContainer {
+    position: flex;
+    width: 306px;
+    height: 100vh;
+    background: #ffffff;
+    box-shadow: 0px 110.802px 88.642px rgba(141, 145, 160, 0.0196802),
+                0px 46.2906px 37.0325px rgba(141, 145, 160, 0.0282725),
+                0px 24.7492px 19.7993px rgba(141, 145, 160, 0.035),
+                0px 13.8742px 11.0994px rgba(141, 145, 160, 0.0417275),
+                0px 7.36848px 5.89478px rgba(141, 145, 160, 0.0503198),
+                0px 3.06619px 2.45295px rgba(0, 0, 0, 0.07);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  
+  }
+  
+  /* Título do dashboard */
+  .dashboardTitle {
+    position: absolute;
+    width: 298px;
+    height: 29px;
+    left: 342px;
+    top: 30px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -0.02em;
+    color: #1e1e1e;
+  }
+  
+  /* Container para a lista de salas */
+  .roomList {
+    position: absolute;
+    width: 583px;
+    height: 464px;
+    left: 342px;
+    top: 76px;
+    overflow-y: auto; 
+  }
+  
+  /* Item da sala */
+  .roomItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  /* Rodapé do dashboard */
+  .dashboardFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding-top: 20px;
+    background: #ffffff;
+    position: relative;
+    top: 0; 
+  }
+
+  .userInfo {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 8%;
+    padding-left: 20px;
+  }
+  .userName {
+    font-weight: 600;
+    font-size: 18px;
+    color: #1e1e1e;
+  }
+
+  .divider {
+    width: 100%; 
+    border: none; 
+    height: 1px; 
+    background-color: #8b8d9a; 
+    margin: 8px 0; 
+    margin-bottom: 15%;
+  }
+
+  .divider2{
+    width: 100%; 
+    border: none; 
+    height: 1px; 
+    background-color: #8b8d9a; 
+    margin: 8px 0; 
+    margin-bottom: 10%;
+    margin-top: 19%;
+  }
+
+  .divider3 {
+    width: 100%; 
+    border: none; 
+    height: 1px; 
+    background-color: #8b8d9a; 
+    margin: 3px 0; 
+  }
+  
+  /* Conteúdo do rodapé */
+  .footerContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    width: 100%; 
+  }
+  .footerTitle{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Nome do usuário */
+  .userName {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #1e1e1e;
+  }
+  
+  /* Texto abaixo do nome do usuário */
+  .footerText {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #8b8d9a;
+    
+  }
+  
+  /* Botões do rodapé */
+  .footerButton {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    font-size: 19.9444px;
+    color: #8b8d9a;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+    text-align: left;
+    padding-left: 10%;
+  }
+  
+  .icon {
+    font-size: 35px; 
+  }
+  
+  /* Estilo do botão ao passar o mouse */
+  .footerButton:hover {
+    color: #1e1e1e;
+  }
+
+  .profileSection {
+    display: flex;
+    align-items: center;
+    background: #F6F8FA; 
+    justify-content: space-between;
+    padding: 10px 20px;
+    width: 100%; 
+     
+  }
+  
+  .profileIcon {
+    font-size: 40px;
+    margin-right: 10px;
+  }
+  
+  .profileName {
+    font-size: 16px;
+    font-weight: 500;
+    color: #1e1e1e;
+    flex: 1; 
+    padding-left: 5%;
+  }
+  
+  .profileOptions {
+    font-size: 20px;
+    color: #000;
+    cursor: pointer;
+  }
+  

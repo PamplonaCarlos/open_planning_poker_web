@@ -1,0 +1,15 @@
+.btn-card{
+    height: 80%;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.br {
+    padding: 10px;
+}
+
+.font-btn {
+    font-size: clamp(16px, 2vw, 24px);
+}
+

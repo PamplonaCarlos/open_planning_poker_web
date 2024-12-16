@@ -1,10 +1,11 @@
 import Image from 'next/image';
 import "./home-poker.css";
 
-export default function HomePoker({ children  }) {
+export default function HomePoker({ children }) {
     return(
       <>
     <main className="container-fluid">
+     
       <div className="row">
         <section className="col-md-6 col-sm-12 ">
           <div className="row d-flex justify-content-center align-items-center">
@@ -12,9 +13,12 @@ export default function HomePoker({ children  }) {
           </div>
         </section>
         <section className="col-md-6 col-sm-12 d-flex justify-content-center ">
-          <div className="row">
+        {
+          children[0]
+        }
+          <div className="row mt-2">
           {
-            children
+            children[1]
           }
           </div>
         </section>

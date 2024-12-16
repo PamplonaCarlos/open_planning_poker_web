@@ -1,0 +1,9 @@
+
+body {
+    background-image: url('../../public/images/poker2.svg'), linear-gradient(to right, rgb(10, 247, 41),rgb(11, 100, 3));
+    background-size: auto;
+}
+
+.vh-75{
+    height: 90vh;
+}

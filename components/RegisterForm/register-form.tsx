@@ -1,4 +1,3 @@
-import SpinningButton from "../SpinnerButton/spinner-button"; 
 import "./register-form.css"
 
 export default function RegisterForm({handleInput, children}) {
@@ -9,6 +8,7 @@ export default function RegisterForm({handleInput, children}) {
             <input type="text" name="name" placeholder="Enter your name" onChange={handleInput} />
             <label>Mail</label>
             <input type="email" name="email" placeholder="Enter your email" onChange={handleInput}/>
+
             <label>Password</label>
             <input type="password" name="password" placeholder="********" onChange={handleInput}/>
             <label>Repeat your password</label>
