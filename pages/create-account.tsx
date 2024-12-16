@@ -1,10 +1,10 @@
 import React, { useState, ChangeEvent } from "react";
 import { useRouter } from 'next/router';
+import RegisterButton from '../components/RegisterButton/register-button';
 
 import HomePoker from "../contents/HomePoker/home-poker";
 import Warning from "../contents/Warning/warning";
 import RegisterForm from "../components/RegisterForm/register-form";
-import SpinningButton from "../components/SpinnerButton/spinner-button";
 
 export default function CreateAccount() {
 
@@ -66,10 +66,10 @@ export default function CreateAccount() {
 
   return (
     <HomePoker>
-      <Warning warning={warning}/>
-      <RegisterForm handleInput={handleInput}>
-        <SpinningButton name="Register" onClick={submitForm} setLoading={setLoading} loading={loading}/>
-      </RegisterForm>
-    </HomePoker>
+    <Warning warning={warning}/>
+    <RegisterForm handleInput={handleInput}>
+      <RegisterButton name="Create an account" onClick={submitForm} setLoading={setLoading} loading={loading} />
+    </RegisterForm>
+  </HomePoker>
   );
 }
