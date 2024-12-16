@@ -1,0 +1,30 @@
+.register-button {
+    box-sizing: border-box;
+  
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    gap: 8px;
+  
+    /* Ajuste de posição e tamanho conforme necessário */
+    width: 100%;
+    max-width: 465px;
+    height: 77.5px;
+  
+    /* Blue 2 */
+    background: #2D9CDB !important;
+    /* Gray 6 */
+    border: 1px solid #F2F2F2;
+    border-radius: 8px;
+  
+    color: white;
+    cursor: pointer;
+  }
+  
+  .register-button:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+  }
