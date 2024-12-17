@@ -6,13 +6,6 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 12px;
-    gap: 8px;
-  
-    /* Ajuste de posição e tamanho conforme necessário */
-    width: 100%;
-    max-width: 465px;
-    height: 77.5px;
   
     /* Blue 2 */
     background: #2D9CDB !important;

@@ -2,7 +2,7 @@ import './forgot-password.css'
 const ForgotPassword = () => {
     
     return (
-        <p className="forgot-password">i forgot the password</p>
+        <p className="forgot-password">I forgot the password</p>
     );
 };
 

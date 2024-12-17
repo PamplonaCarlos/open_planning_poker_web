@@ -1,33 +1,21 @@
-.login-button {
-    flex: 1;
-    font-size: 16px;
-    font-family: Inter;
-    font-weight: 700;
-    line-height: 100%;
-    letter-spacing: 0%;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    width: 350px;
-    margin-bottom: 20px;
-}
-.black:hover {
+.login-button.black:hover {
   cursor: pointer;
   box-shadow: 0 0 5px #000;
   transition: 0.5s;
 }
 
-.white:hover {
+.login-button.white:hover {
   cursor: pointer;
   box-shadow: 0 0 5px #BE1E2D;
   transition: 0.5s;
 }
 
-.black{
+.login-button.black{
   color: #fff;
   background-color: #000;
 }
 
-.white{
+.login-button.white{
   color: #BE1E2D;
   border-color: #BE1E2D;
   background-color: #fff;
