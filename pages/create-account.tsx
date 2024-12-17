@@ -69,7 +69,7 @@ export default function CreateAccount() {
 
   return (
     <HomePoker>
-    <Warning warning={warning}/>
+    <Warning warning={warning} setWarning={undefined}/>
     <RegisterForm handleInput={handleInput}>
       <RegisterButton name="Create an account" onClick={submitForm} setLoading={setLoading} loading={loading} />
     </RegisterForm>
